@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../html/homepage.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Necklace</title>
+</head>
+
+
+                                          <!--stili i fotove-->
+<style>
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    img {
+      vertical-align: middle;
+    }
+    
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+      position: relative;
+      width: 21cm;
+      height: 0cm;
+    }
+    
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+      width: 400px;
+      height: auto;
+    }
+    
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+    
+    /* Next & previous buttons */
+    .prev{
+      cursor: pointer;
+      position: absolute;
+      top: 8.5cm;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 8.5cm;
+      left: 11.012cm;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 28.1cm;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover{
+      background-color: rgb(255, 255, 255);
+    }
+    .next:hover {
+      background-color: rgb(255, 255, 255);
+    }
+    
+    /* Number text (1/3 etc) */
+    
+    
+    
+    /* Container for image text */
+    
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Six columns side by side */
+    .column {
+      float: left;
+      width: 16.66%;
+    }
+    
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+    
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+    </style>
+
+
+                                    <!--fotot, header-i -->
+<body class="body">
+    <div class="DBlogo">
+        <img src="../photos/D..png" alt="Drita">
+    <img src="../photos/B.png" alt="Beqiri">
+</div>
+ <div class="header1db">
+            <pre>Hand Made Jewerly D.B</pre>
+
+    </div>
+
+<div class="header1">
+   
+    <li>
+        <li class="home"><a href="../html/homepage.html#home">HOME</a></li>
+        <li class="products"><a href="../html/homepage.html#products">PRODUCTS</a></li>
+        <li class="about us"><a href="#">ABOUT US</a></li>
+        <li class="contact"><a href="#">CONTACT</a></li>
+    </li>
+
+    <div class="container" style="top: 2.5cm; left: 2.6cm;">
+        <div class="mySlides">
+          
+          <img src="../photos/Anna.jpg" width="450px" height="550px">
+        </div>
+      
+        <div class="mySlides">
+          
+          <img src="../photos/Anna2.jpg" width="450px" height="550px">
+        </div>
+      
+        <div class="Anna Necklace">
+          <h1 style="position: relative; top: -14.5cm; left: 15cm;">Anna Necklace</h1>
+          <h2 style="position: absolute; top: 1.6cm; left: 15cm; ">9.00€</h2>
+        </div>
+        
+          
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        
+      
+        
+      </div>
+                              <!--stili i fotove me js-->
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+    
+
+
+
+
+
+
+
+
+                                           <!--order form-->
+
+
+<!--
+<main >
+    <section>
+
+        <div class="group">
+            <div class="iteam">
+                <form id="contactform" action="https://formspree.io/f/xpzbpwvp" method="POST">
+
+                  <div class="name">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" placeholder="Emri dhe mbiemri">
+                  </div>
+
+                         <div class="shteti">
+                    <label for="Shteti">Shteti:</label>
+                    <input type="text" name="Shteti" placeholder="Shteti ku jeton">
+                         </div>
+
+                                <div class="qyteti">     
+                    <label for="Qyteti">Qyteti:</label>
+                    <input type="text" name="Qyteti" placeholder="Qyteti ku jeton">
+                               </div>   
+
+                                      <div class="rruga">
+                    <label for="Rruga">Rruga:</label>
+                    <input type="text" name="Rruga" placeholder="Rruga">
+                                      </div> 
+
+                                             <div class="numri">
+                    <label for="Number">Numri:</label>
+                    <input type="tel" name="number" placeholder="Numri i telefonit">
+                                             </div>
+
+                                                      <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Email-i juaj">
+                                                     </div>
+
+                                                           <div class="pytje">
+                    <label for="questions">Pyetje:</label>
+                    <input type="text" name="questions" placeholder="Pyetje rreth produktit">
+                                                           </div>
+
+                                                                 <div class="specifikime">
+                    <label for="message">Specifikime:</label>
+                    <textarea name="message" placeholder="Specifikime"></textarea> 
+                                                                 </div>
+                    <button type="submit" class="submit">Submit</button>
+                </form>
+            </div>
+        </div>    
+    </section>
+    
+
+</main>
+
+
+                               
+
+</div>
+-->
+  <div class="body1">
+<div class="containeer">
+  <div class="contact-box">
+    <div class="right">
+      <form id="contactform" action="https://formspree.io/f/xpzbpwvp" method="POST">
+      <h2>Porosit tani!</h2>
+      <label for="name"></label>
+      <input type="text" class="field" placeholder="Emri dhe Mbiemri">
+      <label for="email"></label>
+      <input type="text" class="field" placeholder="Email-i">
+      <label for="number"></label>
+      <input type="text" class="field" placeholder="Numri i Telefonit">
+      <label for="place"></label>
+      <input type="text" class="field" placeholder="Vendi Ku Jeton(Shteti, qyteti, rruga)">
+      <label for="specifications"></label>
+      <textarea placeholder="Specifikime Apo Pyetje Për Produktin" class="field"></textarea>
+      <button class="btn">Send</button>
+    </form>
+    </div>
+  </div>
+</div>
+  </div>
+</body>
+</html>
